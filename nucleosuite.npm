@@ -1,0 +1,14 @@
+[Unit]
+Description=Next.js App
+After=network.target
+
+[Service]
+User=<redacted>
+WorkingDirectory=<redacted>
+ExecStart=<redacted>
+Restart=always
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target

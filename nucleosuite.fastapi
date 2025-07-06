@@ -1,0 +1,12 @@
+[Unit]
+Description=FastAPI Uvicorn Service
+After=network.target
+
+[Service]
+User=<redacted>
+WorkingDirectory=<redacted>
+ExecStart=<redacted>
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

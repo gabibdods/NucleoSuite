@@ -19,14 +19,12 @@
 !src/lib/**
 
 !.gitignore
-!components.json
-!eslint.config.mjs
+!*.json
 !futureApps.idea
-!main.py
+!*.py
 !next.config.ts
-!package-lock.json
-!package.json
-!postcss.config.mjs
-!README.md
-!tsconfig.json
-!tutorial.txt
+!*.mjs
+!*.md
+!*.txt
+!*.fastapi
+!*.npm
