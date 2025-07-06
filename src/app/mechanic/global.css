@@ -1,0 +1,25 @@
+.my-table {
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.my-table th,
+.my-table td {
+  border-collapse: collapse;
+  border: 1px solid #fff;
+  padding: 8px;
+  text-align: center;
+}
+.my-table tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+.my-table tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+.correct {
+  background-color: #e0e0e0;
+}
+.my-table tr.highlighted,
+.my-table th.highlighted {
+  background-color: #bbb;
+}

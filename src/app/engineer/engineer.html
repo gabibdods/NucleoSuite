@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .notes {
+            font-style: italic;
+            color: #666;
+        }
+        .alert {
+            background-color: #fff3cd;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <h1>F1 24 Setups</h1>
+    
+    <div class="alert">
+        <p>ALWAYS PUT 3 MORE LAPS OF FUEL THAN NUMBER OF LAPS</p>
+        <p>DO NOT USE THE C5 IN A RACE AT ALL COSTS UNLESS YOU'RE DOING 25% DISTANCE OR 5 LAPPERS</p>
+        <p>Soft tires are generally not worth using in race unless specified</p>
+        <p>Don't forget to use lean consumption and no ERS usage in formation lap and out lap</p>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Direction</th>
+                <th>Circuit</th>
+                <th>Aero</th>
+                <th>Differential</th>
+                <th>Susppension geometry</th>
+                <th>Suspension</th>
+                <th>Brakes</th>
+                <th>QTyres</th>
+                <th>RTyres</th>
+                <th>Compounds (H-M-S)</th>
+                <th class="strategy">50% Strategy</th>
+                <th>50% Lap #</th>
+                <th>Fuel Capacity</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Sakhir, Bahrain</td>
+                <td>50-50</td>
+                <td>100-30-100</td>
+                <td>L-L-L-L</td>
+                <td>41-8-10-21-22-53</td>
+                <td>100-52:54</td>
+                <td>27.0-max</td>
+                <td>min-min</td>
+                <td>C1-C2-C3</td>
+                <td>SH 8-9 / HS 18-20 / HM 17 / MH 11</td>
+                <td>29</td>
+                <td></td>
+                <td>hards take ages to warm up; can run negative pressure in qualifying; cold temps</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Jeddah, Saudi Arabia</td>
+                <td>21q / 19r-20</td>
+                <td>100-20q / 30r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-15-6-21-21-50</td>
+                <td>100-52:53</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C2-C3-C4</td>
+                <td>MH 8-10 / HM 14-16 / SM 9 / MS 16</td>
+                <td>25</td>
+                <td></td>
+                <td>low wear but SM / MS is shit and should be avoided; clear low-rake track</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Albert Park, Melbourne, Victoria, Australia</td>
+                <td>28-33</td>
+                <td>100-25-100</td>
+                <td>L-L-L-L</td>
+                <td>41-1-8-21-22-48</td>
+                <td>100-53</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 8-12 / HM 15-18</td>
+                <td>29</td>
+                <td></td>
+                <td>undercuts are massive</td>
+            </tr>
+            <tr>
+                <td class="direction">F8</td>
+                <td class="circuit">Suzuka, Mie Prefecture, Japan</td>
+                <td>39q / 38r-35</td>
+                <td>100-25-100</td>
+                <td>L-L-.02-L</td>
+                <td>40-14-8-21-22-54</td>
+                <td>100-52:54</td>
+                <td>max-max</td>
+                <td>28.0-25.5</td>
+                <td>C1-C2-C3</td>
+                <td>MH 8-12 / HM 15-18</td>
+                <td>27</td>
+                <td></td>
+                <td>early race hard stint...</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Jiading, Shanghai, China</td>
+                <td>37q / 34r-32</td>
+                <td>100-15-100</td>
+                <td>L-L-L-L</td>
+                <td>41-15-7-21-22-52</td>
+                <td>100-52:55</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C2-C3-C4</td>
+                <td>MH 12 / HM 16-18</td>
+                <td>28</td>
+                <td></td>
+                <td>turn 1 is brainrot city</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Hard Rock Stadium, Miami Gardens, Florida, United States</td>
+                <td>18-24</td>
+                <td>100-25q / 30r-100</td>
+                <td>L-L-.03-L</td>
+                <td>41-5-10-21-22-60</td>
+                <td>100-54q / 55r</td>
+                <td>26.5-max</td>
+                <td>26.5-25.0</td>
+                <td>C2-C3-C4</td>
+                <td>HM 17 / MH 11-13</td>
+                <td>29</td>
+                <td></td>
+                <td>completely changes how this track feels</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Imola, Emilia-Romagna, San Marino, Italy</td>
+                <td>34-42</td>
+                <td>100-15q / 20r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-5-3-21-20-60</td>
+                <td>100-52:53</td>
+                <td>27.0-max</td>
+                <td>25.5-24.0</td>
+                <td>C3-C4-C5</td>
+                <td>MH 9-11</td>
+                <td>32</td>
+                <td></td>
+                <td>brainrot part sikibi toilet</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Entre La Condamine et Monte Carlo, Monaco</td>
+                <td>50-50</td>
+                <td>100-15-100</td>
+                <td>L-L-L-L</td>
+                <td>41-5-21-21-22-50</td>
+                <td>100-52</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 11-13</td>
+                <td>39</td>
+                <td></td>
+                <td>somehow even more brainrotting than Imola</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Parc Jean-Drapeau, Montreal, Quebec, Canada</td>
+                <td>34-40</td>
+                <td>100-20-100</td>
+                <td>L-L-.04-L</td>
+                <td>41-1-4-21-19-60</td>
+                <td>100-52q / 53:54r</td>
+                <td>27.0-24.0</td>
+                <td>27.0-22.5</td>
+                <td>C3-C4-C5</td>
+                <td>MH 11-13 / HM 22-24</td>
+                <td>35</td>
+                <td></td>
+                <td>fun track</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Montmeló, Barcelona, Catalonia, Spain</td>
+                <td>48-50</td>
+                <td>100-15q / 20r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-18-5-21-21-54</td>
+                <td>100-52q / 54r</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C1-C2-C3</td>
+                <td>MH 12-14 / HM 17-19 / SM 13</td>
+                <td>33</td>
+                <td></td>
+                <td>manage left-side tires for SM/MS; hards feel terrible in first stint, but you have to suck it up and use them</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Spielberg, Styria, Austria</td>
+                <td>27-33</td>
+                <td>100-20q / 25r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-8-4-21-22-55</td>
+                <td>100-50:54</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 8-12 / HM 24-27</td>
+                <td>36</td>
+                <td></td>
+                <td>t1 52, t2 54, t3 53, rest of track 50; add 1 click to break balance for the race</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Silverstone, Northamptonshire, Great-Britain, United Kingdom</td>
+                <td>22-30</td>
+                <td>100-20-100</td>
+                <td>L-L-L-L</td>
+                <td>41-1-3-21-20-62</td>
+                <td>100-52:53</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C1-C2-C3</td>
+                <td>MS 14-16 / SM 9-11</td>
+                <td>26</td>
+                <td></td>
+                <td>26,0 in-session gg</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Mogyoród, Pest County, Hungary</td>
+                <td>50-50</td>
+                <td>100-15q / 20r-100</td>
+                <td>L-L-.02-L</td>
+                <td>41-1-13-21-20-50</td>
+                <td>100-52q / 53:54r</td>
+                <td>max-max</td>
+                <td>25.5-24.5</td>
+                <td>C3-C4-C5</td>
+                <td>MH 7-11</td>
+                <td>35</td>
+                <td></td>
+                <td>dont push on M, undercut is huge (2-2.5s/lap)</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Stavelot, Belgium</td>
+                <td>4q / 2r-0</td>
+                <td>100-25q / 30r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-15-8-21-18-43</td>
+                <td>100-53</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C2-C3-C4</td>
+                <td>S-M 8-9 / HM 11-14 / MH 8-11</td>
+                <td>22</td>
+                <td></td>
+                <td>S good but overheats, need to gap </td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Zandvoort, North Holland, Netherlands</td>
+                <td>47-50</td>
+                <td>100-15-100</td>
+                <td>L-L-.05-L</td>
+                <td>41-1-3-21-20-63</td>
+                <td>100-52</td>
+                <td>29.0-max</td>
+                <td>28.5-max</td>
+                <td>C1-C2-C3</td>
+                <td>MS 20-23 / SM 13-16</td>
+                <td>36</td>
+                <td></td>
+                <td>alot of time sits in the T3 exit; lap in brackets is recommended pitlap</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Monza, Italy</td>
+                <td>0-0</td>
+                <td>100-30-100</td>
+                <td>L-L-L-L</td>
+                <td>41-1-8-21-22-52</td>
+                <td>100-50:54</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 10-12 / HM 15-17</td>
+                <td>27</td>
+                <td></td>
+                <td>18,2 TT 18,6 GP</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Azadliq Square, Baku, Azerbaijan</td>
+                <td>14-21</td>
+                <td>100-30-100</td>
+                <td>L-L-L-L</td>
+                <td>41-1-4-21-18-60</td>
+                <td>100-55</td>
+                <td>27.0-25.5</td>
+                <td>26.5-24.5</td>
+                <td>C3-C4-C5</td>
+                <td>MH 8-10 / HM 16-18</td>
+                <td>26</td>
+                <td></td>
+                <td>negative tire wear; M and H make it from the first lap; </td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Between Downtown Core and Kallang, Marina Bay, Singapore</td>
+                <td>50-50</td>
+                <td>100-20q / 25r-100</td>
+                <td>L-L-.05-L</td>
+                <td>41-1-8-21-19-59</td>
+                <td>100-52:53q / 54r</td>
+                <td>23.0-max</td>
+                <td>23.0-22.3</td>
+                <td>C3-C4-C5</td>
+                <td>MH 12-14 / HM 17-19</td>
+                <td>31</td>
+                <td></td>
+                <td>last corner is potentially scary unless you're the window-licker; use the kerbs</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Austin, Texas, United States</td>
+                <td>45q / 42r-50</td>
+                <td>100-25-100</td>
+                <td>L-L-.05-L</td>
+                <td>41-1-4-21-19-60</td>
+                <td>100-50:54</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C2-C3-C4</td>
+                <td>MH 7-9 / HM 18-20</td>
+                <td>28</td>
+                <td></td>
+                <td>great race set; traction on old hards is problematic</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Mexico City, Mexico</td>
+                <td>30-39</td>
+                <td>100-20-100</td>
+                <td>L-L-.03-L</td>
+                <td>41-1-4-21-18-60</td>
+                <td>100-52q / 53:54r</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 10-12 / HM 20-22</td>
+                <td>36</td>
+                <td></td>
+                <td>godawful piece of shit track; play with break balance first stint for rears</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Interlagos, São Paulo, Brazil</td>
+                <td>44q / 41r-44</td>
+                <td>100-20q / 30r-100</td>
+                <td>L-L-L-L</td>
+                <td>41-1-5-21-22-55</td>
+                <td>100-51q / 52r</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C2-C3-C4</td>
+                <td>HM 19-21 / MH 13-15</td>
+                <td>36</td>
+                <td></td>
+                <td>lock-up simulator; </td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Paradise, Nevada, United States</td>
+                <td>0-2</td>
+                <td>100-25q / 30r-100</td>
+                <td>L-L-.03q / Lr-L</td>
+                <td>41-1-3-21-20-55</td>
+                <td>100-54:56</td>
+                <td>24.5-max</td>
+                <td>24.5-25.0</td>
+                <td>C3-C4-C5</td>
+                <td>MH 7-9 / HM 16-18</td>
+                <td>25</td>
+                <td></td>
+                <td>31,1 PB</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Lusail, Al Daayen, Qatar</td>
+                <td>50-50</td>
+                <td>100-15q / 20r-100</td>
+                <td>L-L-.05-L</td>
+                <td>41-22-6-21-21-52</td>
+                <td>100-50:52</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C1-C2-C3</td>
+                <td>MH 11-13 / HM 15-18</td>
+                <td>29</td>
+                <td></td>
+                <td>S REEK; Be prepared to have 10% wear per lap on the left front</td>
+            </tr>
+            <tr>
+                <td class="direction">ACW</td>
+                <td class="circuit">Yas Island, Abu Dhabi, United Arab Emirates</td>
+                <td>42q / 37r-40</td>
+                <td>100-20-100</td>
+                <td>L-L-L-L</td>
+                <td>41-15-7-21-22-54</td>
+                <td>100-54</td>
+                <td>max-max</td>
+                <td>max-max</td>
+                <td>C3-C4-C5</td>
+                <td>MH 8-11</td>
+                <td>29</td>
+                <td></td>
+                <td>never driving</td>
+            </tr>
+            <tr>
+                <td class="direction">CW</td>
+                <td class="circuit">Portimão, Algarve, Portugal</td>
+                <td>43q / 41r-47</td>
+                <td>100-25q / 30r-100</td>
+                <td>L-L-.05-L</td>
+                <td>40-1-4-21-20-62</td>
+                <td>100-52:54</td>
+                <td>29.0-26.0</td>
+                <td>28.5-25.5</td>
+                <td>C1-C2-C3</td>
+                <td>SM 11-13 / MS 21-23</td>
+                <td>33</td>
+                <td></td>
+                <td>race-tested goodness; 16,0 PB</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Issue</th>
+                <th>Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Understeer</td>
+                <td>higher front wing, less front arb, front toe, bigger difference between front & rear ride-height, lower brake bias / off diff, higher engine braking</td>
+            </tr>
+            <tr>
+                <td>Oversteer</td>
+                <td>higher rear wing, more front arb, smaller ride height gap, higher bbal + off diff, lower engine brake</td>
+            </tr>
+            <tr>
+                <td>Front locking</td>
+                <td>lower brake bias, lower off diff, lower engine braking</td>
+            </tr>
+            <tr>
+                <td>Rear locking</td>
+                <td>higher brake bias, higher off diff, lower engine braking</td>
+            </tr>
+            <tr>
+                <td>Overheating (f)</td>
+                <td>more oversteer, lower bbal, higher engine brake</td>
+            </tr>
+            <tr>
+                <td>Overheating (r)</td>
+                <td>more understeer, smoother driving, bbal more to front</td>
+            </tr>
+            <tr>
+                <td>Bottoming (f)</td>
+                <td>higher front ride height, avoid kerb/bump</td>
+            </tr>
+            <tr>
+                <td>Bottoming (r)</td>
+                <td>higher rear ride height, avoid kerb/bump</td>
+            </tr>
+            <tr>
+                <td>Spinning on Kerbs</td>
+                <td>lift, wheels lose grip mounting and leaving zebras</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>What ERS modes should I run?</h2>
+    <h3>For qualifying, mostly medium and overtake. Hotlap for the long straights, like Monza or Vegas. Medium for the twisty sections, and overtake out of slow corners / short straights. For the race, don't be scared to turn the ERS off for some periods, as upshifting with no ERS will kick-start the recharge process. Be aware that turning the ERS off does cost you tons of speed.</h3>
+
+    <h2>What's up with the wings? Do they work?</h2>
+    <h3>F1 24 is completely different to previous games, and now we get rotation / downforce through the ride-height and rollbars more. For tracks such as Spain, Hungary, Qatar and Zandvoort, a standard 50-36 wing 21-21 rollbar combo will leave you in a bad place, as you're missing out on crucial rear downforce. This situation is that if you make one wrong move the car can just die on you, but with 5-21/10-21 arb the rotation comes much more naturally, and we are able to run much more rear wing without losing rotation. However, the extra rotation isn't for everyone - run a bit more roll-bar if struggling with oversteer.</h3>
+
+    <h2>Wet-Weather Changes</h2>
+    <h3>Wet weather in F1 24 is a bit different and the change list is smaller - you only need to turn down the on-diff to 85/90% and increase the front anti-roll bar + ride height by 2-3 clicks</h3>
+
+    <div></div>
+
+    <h1>F1 23 Setups</h1>
+
+    <div class="alert">
+        <p>All setups are meant for online races but can also be used in career mode. Some tracks will be harder than others. Tracks in bold are notorious for having the AI use very low downforce levels that make them fast on the straights. Using lower wings than on the spreadsheet will come with a significant performance loss, especially on old tires.</p>
+        <p>Tire pressures are set in a way that tire wear is equal on all 4 tires unless the circuit is front / rear limited. Note that rears go off faster than the fronts, and tire pressures are symmetrical for the front and the rear. Do not try asymmetric tire pressures.</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Direction</th>
+                <th>Circuit</th>
+                <th>Aerodynamics</th>
+                <th>Differential</th>
+                <th>Suspension geometry</th>
+                <th>Suspension</th>
+                <th>Brakes</th>
+                <th>QTyres</th>
+                <th>RTyres</th>
+                <th>50% Fuel</th>
+                <th class="strategy">50% Strategy</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Bahrain International Circuit</td>
+                <td>50-40q / 46-36r</td>
+                <td>55-51</td>
+                <td>RRLL</td>
+                <td>38-8-9-1-32-39</td>
+                <td>100-56</td>
+                <td>22.2 20.0</td>
+                <td>22.4 20.0</td>
+                <td>30.9 (+1.9)</td>
+                <td>SM 11 / HM 14</td>
+                <td>test set</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Jeddah Corniche Circuit</td>
+                <td>37-27q / 33-23r</td>
+                <td>50q / 55r-51</td>
+                <td>RRLL</td>
+                <td>41-9-1-1-33-38</td>
+                <td>100-55q / 56r</td>
+                <td>22.0 20.0</td>
+                <td>22.4 20.0</td>
+                <td>25.5 (+0.5)</td>
+                <td>SM 11 / MS 15</td>
+                <td>from Maximilian Luckert; 37-27 quali wing, don't touch hards </td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Albert Park Grand Prix Circuit</td>
+                <td>39-31</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-11-1-1-32-35</td>
+                <td>100-55q / 56r</td>
+                <td>22.4 20.0</td>
+                <td>22.6 20.1</td>
+                <td>30.3 (+1.3)</td>
+                <td>SM 12 / MS 17</td>
+                <td>more normal set is 40-30 55-51 RRLL 41-9-4-1-32-38 100/56 22.5 20.0; </td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Shanghai International Circuit</td>
+                <td>46-33</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-9-4-1-32-38</td>
+                <td>100-56</td>
+                <td>22.5 20.0</td>
+                <td>22.5 20.0</td>
+                <td>29.9 (+1.9)</td>
+                <td>HM 15 / HMM if SCs</td>
+                <td>50-35 quali; not as deadly as it sounds</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Shanghai International Circuit (Old)</td>
+                <td>46-33</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>36-8-5-1-33-38</td>
+                <td>100-55q / 56r</td>
+                <td>22.6 20.0</td>
+                <td>22.6 20.0</td>
+                <td>30.2 (+2.2)</td>
+                <td>HM 15</td>
+                <td>old set, still works fine</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Baku City Circuit</td>
+                <td>31-23</td>
+                <td>55q / 52r-50</td>
+                <td>RRLL</td>
+                <td>35-7-4-1-30-36</td>
+                <td>100-55q / 56-57r</td>
+                <td>22.4 20.0</td>
+                <td>22.4 20.0</td>
+                <td>26.7 (+0.7)</td>
+                <td>HM 13 / HM 12</td>
+                <td>do NOT try low wings unless you have a death wish</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Miami International Autodrome</td>
+                <td>40-29</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>38-8-4-1-32-38</td>
+                <td>100-56q / 57r</td>
+                <td>22.3 20.0</td>
+                <td>22.6 20.0</td>
+                <td>30.3 (+1.4)</td>
+                <td>HM 14 / SM 12</td>
+                <td>taken from Pogmeer Academy spreadsheet w slight modifications</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Autodromo Internazionale Enzo e Dino Ferrari</td>
+                <td>43-30q / 42-30r</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-8-4-1-33-39</td>
+                <td>100-55q / 56r</td>
+                <td>22.4 20.0</td>
+                <td>22.4 20.0</td>
+                <td>33.5 (+1.5)</td>
+                <td>HM 17 / MH 14</td>
+                <td>50 diff for T6 and T9 in quali. Could be confused with maximilian luckert's setup</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit de Monaco</td>
+                <td>50-50</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>30-9-8-3-32-39</td>
+                <td>100-50q / 53r</td>
+                <td>22.0 20.0</td>
+                <td>22.0 20.0</td>
+                <td>40.8 (+1.8)</td>
+                <td>HM 20 / MH 16</td>
+                <td>avoid softs; extremely old set still works</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit de Barcelona-Catalunya</td>
+                <td>50-40q / 47-37r</td>
+                <td>50-50</td>
+                <td>RRLL</td>
+                <td>41-12-4-1-33-38</td>
+                <td>100-54</td>
+                <td>22.5 20.0</td>
+                <td>22.6 20.0</td>
+                <td>34.4 (+1.4)</td>
+                <td>HM 17 / SM 14</td>
+                <td>from Maximilian Luckert; lowest wings 46-36</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit Gilles-Villeneuve</td>
+                <td>47-38q / 44-38r</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-6-4-1-33-38</td>
+                <td>100-54q / 56r</td>
+                <td>22.2 20.0</td>
+                <td>22.2 20.0</td>
+                <td>36.4 (+1.4)</td>
+                <td>SM 15 / SMM 9,23</td>
+                <td>from Pogmeer Academy, slightly modified</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Red Bull Ring</td>
+                <td>40-28q / 38-28r</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>41-9-1-1-32-38</td>
+                <td>100-54q / 56r</td>
+                <td>22.5 20.0</td>
+                <td>22.5 20.0</td>
+                <td>37.3 (+1.3)</td>
+                <td>HM 18 / MH 16</td>
+                <td>55 T1/T3, 53 or 54 everywhere else. 50 diff for S2/S3 as well in Q</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Silverstone Circuit</td>
+                <td>32-20</td>
+                <td>55-51</td>
+                <td>RRLL</td>
+                <td>41-8-3-1-31-36</td>
+                <td>100-55</td>
+                <td>23.0 20.5</td>
+                <td>23.0 20.5</td>
+                <td>27.2 (+1.2)</td>
+                <td>SM 10 / MS 16</td>
+                <td>old ET8 leak</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Hungaroring</td>
+                <td>50-45</td>
+                <td>50-50</td>
+                <td>RRLL</td>
+                <td>41-8-1-1-33-37</td>
+                <td>100-53q / 54r</td>
+                <td>22.0 20.0</td>
+                <td>22.0 20.0</td>
+                <td>36.9 (+1.9)</td>
+                <td>SM 15 / SMM 10,23</td>
+                <td>again, tough to pass. 2stop very very fast</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit de Spa-Francorchamps</td>
+                <td>24-15</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-9-2-1-32-37</td>
+                <td>100-55</td>
+                <td>22.6 20.0</td>
+                <td>23.0 20.5</td>
+                <td>23.2 (+1.2)</td>
+                <td>SM 9 / HM 12</td>
+                <td>baseline set, rest in piss 2010 track model</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit Zandvoort</td>
+                <td>50-40</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>37-7-1-1-33-39</td>
+                <td>100-54</td>
+                <td>22.6 20.0</td>
+                <td>22.6 20.0</td>
+                <td>39.0 (+3.0)</td>
+                <td>HM 18 / MH 16</td>
+                <td>high wear. SM is risky</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Autodromo Nazionale Monza</td>
+                <td>17-10</td>
+                <td>55q / 52r-51</td>
+                <td>RRLL</td>
+                <td>41-5-4-1-32-38</td>
+                <td>100-54:56</td>
+                <td>22.6 20.0</td>
+                <td>23.0 20.6</td>
+                <td>27.8 (+0.8)</td>
+                <td>HM 14 / SM 11</td>
+                <td>steer clear of this track</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Marina Bay Street Circuit</td>
+                <td>50-46</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>36-8-3-1-32-38</td>
+                <td>100-55q / 56r</td>
+                <td>22.0 20.0</td>
+                <td>22.0 20.0</td>
+                <td>32.3 (+1.3)</td>
+                <td>HM 15 / MH 13</td>
+                <td>avoid softs. 2stop not possible</td>
+            </tr>
+            <tr>
+                <td>F8</td>
+                <td class="circuit">Suzuka Circuit</td>
+                <td>43-33</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>41-14-1-1-33-39</td>
+                <td>100-54q / 55r</td>
+                <td>22.5 20.0</td>
+                <td>22.5 20.0</td>
+                <td>29.7 (+2.7)</td>
+                <td>SM 11 / HM 14</td>
+                <td>high wear on SM. could also go SH</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Lusail International Circuit</td>
+                <td>50-39</td>
+                <td>50-50</td>
+                <td>RRLL</td>
+                <td>41-15-3-1-33-38</td>
+                <td>100-52q / 54r</td>
+                <td>23.0 20.5</td>
+                <td>23.0 20.5</td>
+                <td>31.9 (+2.9)</td>
+                <td>HM 15 / MS 17</td>
+                <td>Red Bull eSports leak; C2-C4 in sprints, only do H-M Lap 17 then</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Circuit of The Americas</td>
+                <td>50-40</td>
+                <td>55-51</td>
+                <td>RRLL</td>
+                <td>41-5-1-1-32-40</td>
+                <td>100-56q / 57r</td>
+                <td>22.3 20.0</td>
+                <td>22.3 20.0</td>
+                <td>29.6 (+1.6)</td>
+                <td>HM 15</td>
+                <td>softs are dogwater, high rh for stability (32 front rh possible)</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Autodromo Hermanos Rodriguez</td>
+                <td>44-34</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-6-2-1-32-38</td>
+                <td>100-56q / 57r</td>
+                <td>22.6 20.0</td>
+                <td>22.6 20.0</td>
+                <td>38.4 (+2.4)</td>
+                <td>HM 19 / MH 16</td>
+                <td>47-37 high race wings</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Autodromo Jose Carlos Pace</td>
+                <td>46-32</td>
+                <td>50:55-50</td>
+                <td>RRLL</td>
+                <td>41-9-3-1-32-38</td>
+                <td>100-55</td>
+                <td>22.0 20.0</td>
+                <td>22.2 20.0</td>
+                <td>37.6 (+1.6)</td>
+                <td>MS 21 / HM 18</td>
+                <td>probably still understeery knowing this track</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Las Vegas Strip Circuit</td>
+                <td>15-10</td>
+                <td>55-52</td>
+                <td>RRLL</td>
+                <td>30-7-12-10-31-36</td>
+                <td>100-56q / 57r</td>
+                <td>22.8 20.4</td>
+                <td>22.8 20.4</td>
+                <td>25.0 (0.0)</td>
+                <td>HM 12 / SM 11</td>
+                <td>hards feel terrible, caution advised / 30.8 pb</td>
+            </tr>
+            <tr>
+                <td>ACW</td>
+                <td class="circuit">Yas Marina Circuit</td>
+                <td>43-35</td>
+                <td>55q / 51r-50</td>
+                <td>RRLL</td>
+                <td>41-9-4-1-32-35</td>
+                <td>100-55q / 56r</td>
+                <td>22.2 20.0</td>
+                <td>22.4 20.0</td>
+                <td>30.4 (+1.4)</td>
+                <td>HM 15</td>
+                <td>46-34 55-50q 51r RRLL 41-9-4-1-32-38 100/56 22.4-20.0 normal setup</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Autodromo Internacional do Algarve</td>
+                <td>50-41q / 48-39r</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>41-8-3-1-33-38</td>
+                <td>100-55</td>
+                <td>22.4 20.0</td>
+                <td>22.4 20.0</td>
+                <td>34.5 (+1.5)</td>
+                <td>SM 14 / MS 19</td>
+                <td>H are awful, don't use them</td>
+            </tr>
+            <tr>
+                <td>CW</td>
+                <td class="circuit">Circuit Paul Ricard</td>
+                <td>39-29</td>
+                <td>50-50</td>
+                <td>RRLL</td>
+                <td>32-5-6-1-33-39</td>
+                <td>100-54q / 55r</td>
+                <td>22.4 20.0</td>
+                <td>22.9 20.3</td>
+                <td>N/A</td>
+                <td>HM 14</td>
+                <td>can go +5/-5 on wings</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>F1 22 Setups</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Direction</th>
+                <th>Circuit</th>
+                <th>Aerodynamics</th>
+                <th>Differential</th>
+                <th>Suspension geometry</th>
+                <th>Suspension</th>
+                <th>Brakes</th>
+                <th>QTyres</th>
+                <th>RTyres</th>
+                <th>50% Fuel</th>
+                <th>50% Strategy</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>GULF AIR BAHRAIN GRAND PRIX</td>
+                <td>30-20</td>
+                <td>60-50</td>
+                <td>RRLL</td>
+                <td>1-1-1-9-5</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.8</td>
+                <td>28.8</td>
+                <td>0.8 HM 14-17 / MS 19</td>
+                <td>T2 is a deathtrap; 60% diff for that section</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>STC SAUDI ARABIAN GRAND PRIX</td>
+                <td>15-10</td>
+                <td>58-50</td>
+                <td>RRLL</td>
+                <td>3-1-1-5-4</td>
+                <td>100-50</td>
+                <td>22.5-21.6</td>
+                <td>22.5-21.8</td>
+                <td>24.7</td>
+                <td>0.3 HM 12-16</td>
+                <td>esports wing was even lower possibly</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HEINEKEN AUSTRALIAN GRAND PRIX</td>
+                <td>12-10</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-8-6</td>
+                <td>100-50</td>
+                <td>22.5-21.8</td>
+                <td>22.5-21.3</td>
+                <td>28.7</td>
+                <td>0.3 HM 14-17</td>
+                <td>abhorrent track; shit kerbs and bumpy</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>AWS GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA</td>
+                <td>28-21</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-9-5-6</td>
+                <td>100-50</td>
+                <td>22.5-21.6</td>
+                <td>22.5-21.6</td>
+                <td>33.2</td>
+                <td>0.7 HM 13-16</td>
+                <td>goat; dont be too greedy with kents in S2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>CRYPTO.COM MIAMI GRAND PRIX</td>
+                <td>9-3</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-11-5</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>29.1</td>
+                <td>0.1 HM 14-17</td>
+                <td>yes wings; abhorrent track</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ARAMCO GRAN PREMIO DE ESPAÑA</td>
+                <td>39-29</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>1-1-1-1-6-5</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>33.9</td>
+                <td>0.9 HM 15-20</td>
+                <td>softs fucking suck; dont touch the kerb</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TAG HEUER GRAND PRIX DE MONACO</td>
+                <td>50-50</td>
+                <td>60-50</td>
+                <td>RRLL</td>
+                <td>1-1-1-1-10-6</td>
+                <td>100-50</td>
+                <td>22.5-21.8</td>
+                <td>22.5-21.8</td>
+                <td>40</td>
+                <td>1.0 HM 20-23 / MH 13-16</td>
+                <td>do you want to die on old hards or suffer on cold hards? Choose glorious</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>QATAR AIRWAYS AZERBAIJAN GRAND PRIX</td>
+                <td>7-4</td>
+                <td>57-50</td>
+                <td>RRLL</td>
+                <td>3-1-1-1-8-6</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>25.6</td>
+                <td>0.4 HM 14-16 / MH 9-11</td>
+                <td>glorious</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PIRELLI GRAND PRIX DU CANADA</td>
+                <td>28-20</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>1-1-1-1-5-4</td>
+                <td>100-50</td>
+                <td>22.5-21.8</td>
+                <td>22.5-21.8</td>
+                <td>35.6</td>
+                <td>0.6 HM 17-19 / MS 22</td>
+                <td>M and H last whole race lol</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>QATAR AIRWAYS BRITISH GRAND PRIX</td>
+                <td>18-10</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>3-1-1-1-5-4</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>25.1</td>
+                <td>0.9 HM 14-17 / MH 9-11</td>
+                <td>dont make the mistake of accelerating out of a corner below 41th</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>MSC CRUISES AUSTRIAN GRAND PRIX</td>
+                <td>18-11</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>4-1-2-1-6-3</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>35.5</td>
+                <td>0.5 HM 17-20</td>
+                <td>T1 kerb can die</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LENOVO GRAND PRIX DE FRANCE</td>
+                <td>17-12</td>
+                <td>53-50</td>
+                <td>RRLL</td>
+                <td>3-1-1-1-5-4</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>27.3</td>
+                <td>0.3 HM 14-17</td>
+                <td>ew</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ARAMCO MAGYAR NAGYDÍJ</td>
+                <td>59-38</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-7-3</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>36.3</td>
+                <td>1.3 HM 18-20</td>
+                <td>goat; front left may die</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ROLEX BELGIAN GRAND PRIX</td>
+                <td>8-3</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>1-1-1-1-11-4</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>21.8</td>
+                <td>0.2 HM 12-14</td>
+                <td>bumpy</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HEINEKEN DUTCH GRAND PRIX</td>
+                <td>47-35</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>3-1-2-1-6-3</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>38.2</td>
+                <td>2.2 HM 17-21</td>
+                <td>fuck this</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PIRELLI GRAN PREMIO D’ITALIA</td>
+                <td>2-0</td>
+                <td>60-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-5-6</td>
+                <td>100-50</td>
+                <td>22.5-21.0</td>
+                <td>22.5-21.0</td>
+                <td>26.8</td>
+                <td>0.2 HM 13-16</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>SINGAPORE AIRLINES SINGAPORE GRAND PRIX</td>
+                <td>50-45</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-10-6</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>31.8</td>
+                <td>0.8 HM 16-19</td>
+                <td>goat</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HONDA JAPANESE GRAND PRIX</td>
+                <td>26-15</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-11-6</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>26.6</td>
+                <td>0.4 HM 13-16</td>
+                <td>old mercedes esports leak</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PIRELLI UNITED STATES GRAND PRIX</td>
+                <td>38-33</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-7-4</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>29.0</td>
+                <td>0.7 HM 17-20</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GRAN PREMIO DE LA CIUDAD DE MÉXICO</td>
+                <td>21-15</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>5-2-3-1-8-7</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>36.4</td>
+                <td>0.4 HM 18-21 / MS 24</td>
+                <td>old zerk set</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LENOVO GRANDE PRÊMIO DE SÃO PAULO</td>
+                <td>12-4</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>5-1-1-1-7-5</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>29.6</td>
+                <td>0.4 HM 15-17</td>
+                <td>lowest wings you can get away with</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ETIHAD AIRWAYS ABU DHABI GRAND PRIX</td>
+                <td>27-20</td>
+                <td>56-50</td>
+                <td>RRLL</td>
+                <td>2-1-1-1-9-7</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>29.6</td>
+                <td>0.4 HM 15-17</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>HEINEKEN GRANDE PRÉMIO DE PORTUGAL</td>
+                <td>28-21</td>
+                <td>55q / 56r-50</td>
+                <td>RRLL</td>
+                <td>4-1-3-1-6-5</td>
+                <td>100-50</td>
+                <td>22.5-21.3</td>
+                <td>22.5-21.3</td>
+                <td>33.8</td>
+                <td>0.8 HM 15-18</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LENOVO CHINESE GRAND PRIX</td>
+                <td>28-22</td>
+                <td>55-50</td>
+                <td>RRLL</td>
+                <td>3-1-2-1-8-5</td>
+                <td>100-50</td>
+                <td>22.5-21.5</td>
+                <td>22.5-21.5</td>
+                <td>28.8</td>
+                <td>0.8 HM 14-17</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
