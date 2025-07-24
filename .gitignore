@@ -1,35 +1,64 @@
+# https://github.com/gabibdods/NewRepositoryTemplate:
 *
 
 !.gitattributes
 !.gitignore
+!README.md
 !License/
-!License/*.md
+!License/LICENSE.md
+!License/NOTICE.md
+
+
+# particular repository ignores:
+
+!nucleosuite.fastapi
+!*.json
+!eslint.config.mjs
+!postcss.config.mjs
+!nucleosuite.npm
+!main.py
+!test.py
+!next.config.ts
 
 !public/
-!public/**
+!public/*.svg
 
 !src/
-!src/**
 
 !src/app/
-!src/app/**
+!src/app/favicon.ico
+!src/app/globals.css
+!src/app/layout.tsx
+!src/app/page.tsx
+!src/app/page.original.tsx
+
+!src/app/engineer/
+!src/app/engineer/engineer.html
+!src/app/engineer/global.css
+!src/app/engineer/page.tsx
+
+!src/app/mechanic/
+!src/app/mechanic/global.css
+!src/app/mechanic/page.tsx
+
+!src/app/pwm/
+!src/app/pwm/page.tsx
+
+!src/app/telemetry/
+!src/app/telemetry/page.tsx
+
+!src/app/trainer/
+!src/app/trainer/global.css
+!src/app/trainer/page.tsx
 
 !src/components/
-!src/components/**
+!src/components/controls.tsx
 
 !src/components/ui/
-!src/components/ui/**
+!src/components/ui/card.tsx
+!src/components/ui/progress.tsx
+!src/components/ui/slider.tsx
 
 !src/lib/
-!src/lib/**
-
-!.gitignore
-!*.json
-!futureApps.idea
-!*.py
-!next.config.ts
-!*.mjs
-!*.md
-!*.txt
-!*.fastapi
-!*.npm
+!src/lib/system.ts
+!src/lib/utils.ts

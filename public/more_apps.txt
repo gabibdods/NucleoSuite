@@ -1,7 +1,0 @@
-/alpha		: advanced graphic calculator
-/chef		: recipes
-/cloud		: tv recordings
-/keeper		: clocks in different cities
-/line		: pdf books
-/passenger	: homework | agenda | scheduler
-/retro		: retro F1 races
