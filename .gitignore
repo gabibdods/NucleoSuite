@@ -1,5 +1,10 @@
 *
 
+!.gitattributes
+!.gitignore
+!License/
+!License/*.md
+
 !public/
 !public/**
 
