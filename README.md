@@ -1,115 +1,91 @@
-# 🌐 Personal Web Server for Automated Web + Hardware Applications
+# Personal Web Server for Automated Web + Hardware Applications
 
-A production-grade web server and GPIO control system configured to host personal web apps, automate daily tasks, and control real-world hardware. Built with React, Next.js, Node.js, TypeScript, TailwindCSS, and ESLint on the frontend, and **Python + FastAPI + GPIO + Uvicorn** on the backend. Publicly accessible via **Cloudflare ZeroTrust**, and deployed on a Raspberry Pi 5 for low-power, high-efficiency use.
+# Full-Stack Web-Controlled GPIO System with FastAPI and React
 
----
+### Description
 
-## 🔍 Problem Statement
-
-I needed a reliable and secure web server to:
-- Host personal web applications publicly
-- Automate daily routines
-- Interact with physical hardware (e.g., GPIO control)
-- Deepen my full-stack and embedded systems expertise
+- A production-ready, low-power full-stack web server deployed on a Raspberry Pi 5
+- The system hosts personal web applications and provides remote control over real-world hardware via GPIO
+- It combines a Next.js frontend with a FastAPI backend and utilizes Cloudflare ZeroTrust for secure public access
 
 ---
 
-## 🎯 Project Goals
+## NOTICE
 
-- Host full-stack applications and make them publicly accessible
-- Integrate software automation with **real-time GPIO hardware control**
-- Explore scalable deployment on limited hardware (Raspberry Pi 5)
-- Enhance DevOps, system administration, and IoT skills
-- Build and expose a **Pulse Width Modulator control interface** over the web
+- Please read through this `README.md` to better understand the project's source code and setup instructions
+- Also, make sure to review the contents of the `License/` directory
+- Your attention to these details is appreciated — enjoy exploring the project!
 
 ---
 
-## 🛠️ Technologies Used
+## Problem Statement
 
-### 💻 Web & Backend Stack
-
-- **Frontend:**
-  - React — UI component library
-  - Next.js — Full-stack React framework (SSR/ISR)
-  - TailwindCSS — Utility-first CSS framework
-
-- **Backend (Web & Hardware Control):**
-  - **Python** — Backend language for controlling GPIO
-  - **FastAPI** — High-performance web API framework
-  - **Uvicorn** — ASGI server to run FastAPI app
-  - **lgpio** — Library for controlling PWM and GPIO on Raspberry Pi
-  - **Raspberry Pi pin factory** — Native GPIO interface
-
-- **Tooling:**
-  - Node.js & TypeScript — Server-side scripting and type safety
-  - ESLint — Code quality management
-  - WebStorm — Remote Python/Node.js development IDE
-
-- **Deployment & Security:**
-  - Cloudflare ZeroTrust — Public access tunnel and security layer
-  - SSH — Secure remote connection to the Pi
-  - Ubuntu Server — Custom OS installed on Raspberry Pi 5
+- I needed a secure, energy-efficient server to host full-stack web applications and enable remote control over embedded hardware (e.g., LEDs, motors) via GPIO
+- The solution had to support both frontend automation and backend hardware interfacing with production-grade deployment
 
 ---
 
-## 🔌 Hardware Integration: PWM Over Web
+## Project Goals
 
-- A **PWM signal generator** was built using Python and the Raspberry Pi’s GPIO interface.
-- Controlled via a RESTful web API exposed by **FastAPI**, hosted on the Pi.
-- Hosted using **Uvicorn** for asynchronous performance.
-- The web frontend communicates with the backend to send PWM values (e.g., duty cycle, frequency).
-- Accessible from the public internet through **Cloudflare Tunnel**, with ZeroTrust authentication.
+### Build a cloud-accessible personal web server with real-time GPIO control
 
-> ✅ Result: Users can control PWM output (e.g., LED brightness, motor speed) directly from a web interface anywhere in the world.
+- Enable users to interact with physical hardware (e.g., motors, LEDs) via a secure web interface using Cloudflare tunneling and authentication
 
----
+### Explore full-stack development and embedded system deployment on constrained hardware
 
-## 🔍 Pulse Width Modulators vs. Oscillators — What's the Difference?
-
-To understand how this project controls hardware using GPIO, it’s important to distinguish Pulse Width Modulation (PWM) from other signal generation methods like oscillators or waveform generators.
-
-### ⚙️ Pulse Width Modulator (PWM)
-
-- What It Is:
-  PWM generates a digital signal that rapidly switches between ON and OFF at a fixed frequency. The key variable is the duty cycle — the percentage of time the signal is ON during one cycle.
-- Purpose in This Project:
-  Used to control power delivery to devices (like LEDs, motors, servos) by varying the duty cycle, not the voltage itself.
-- Use Cases:
-  LED brightness control
-  Motor speed regulation
-  Servo positioning
-  Efficient power delivery in embedded systems
-- Example:
-  A 1kHz PWM signal with a 25% duty cycle delivers 25% of full power on average.
-
-### 🔄 Oscillator
-- What It Is:
-  An oscillator creates a continuous waveform (usually sine, square, or triangle) with a fixed amplitude and frequency.
-- Key Difference from PWM:
-  Oscillators are analog or high-frequency digital signal generators.
-  They do not vary duty cycle — the waveform shape and frequency are typically fixed.
-  Used for clock generation, modulation, and carrier wave transmission.
-- Use Cases:
-  Timing circuits and clocks (e.g., quartz oscillators)
-  Radio frequency (RF) communication
-  Audio signal generation
-  Frequency synthesizers
-- Example:
-  A 10MHz sine wave oscillator would continuously produce a sine wave at 10 million cycles per second, regardless of amplitude control needs.
+- Combine Next.js, FastAPI, and GPIO programming to deepen practical skills in software, hardware, and network security
 
 ---
 
-## 🧩 Design Decisions
+## Tools, Materials & Resources
 
-- Used **FastAPI** for its speed, type annotations, and automatic documentation
-- Selected **lgpio** for low-latency PWM control over the Pi’s GPIO pins
-- Designed a secure frontend-backend communication model using HTTPS tunnels via Cloudflare
-- Used **Next.js** for modular routing and React Server Components
-- Enabled hardware-software integration without requiring local network access
+### FastAPI, Uvicorn, and Python
+
+- FastAPI for async backend control; Uvicorn for ASGI server deployment; Python to control GPIO and PWM logic
+
+### Raspberry Pi 5 + lgpio Library
+
+- Used as the host platform; GPIO managed through the `lgpio` library for responsive PWM signaling
+
+### React, Next.js, TailwindCSS, and TypeScript
+
+- Full-featured frontend stack with responsive design, modular routing, and type-safe logic
 
 ---
 
-## 🔐 Architecture Overview
+## Design Decision
+
+### FastAPI with Uvicorn for web-based GPIO control
+
+- Chosen for speed, simplicity, and async support — ideal for controlling time-sensitive GPIO output remotely
+
+### Secure tunneling with Cloudflare ZeroTrust
+
+- Provides safe public access without exposing network ports directly or compromising the LAN
+
+### Component-based UI with Next.js and Tailwind
+
+- Enables fast frontend development, SSR/ISR capabilities, and consistent styling with minimal overhead
+
+---
+
+## Features
+
+### Web-Controlled PWM Hardware Interface
+
+- Remotely adjust GPIO output using a REST API to control duty cycle, frequency, and device states
+
+### Real-Time Communication Between Frontend and Hardware
+
+- Uses fetch-based interactions between the Next.js frontend and FastAPI backend for seamless command execution
+
+### Cloudflare Tunnel + ZeroTrust Security
+
+- The site is protected and globally accessible using Cloudflare Tunnel with authentication policies
+
+---
+
+## Block Diagram
 
 ```plaintext
 +----------------+        +--------------------+        +-------------------------+        +------------------------+
@@ -118,3 +94,136 @@ To understand how this project controls hardware using GPIO, it’s important to
 +----------------+        +--------------------+        | Next.js + FastAPI       |        +------------------------+
                                                         | PWM control via GPIO    |
                                                         +-------------------------+
+```
+
+---
+
+## Functional Overview
+
+- The Next.js frontend serves a UI for hardware control inputs
+- Backend API (FastAPI + Uvicorn) handles hardware interaction requests
+- GPIO state is controlled in real-time via Python `lgpio` library
+- Cloudflare ZeroTrust enables secure global access to the private Pi server
+
+---
+
+## Challenges & Solutions
+
+### GPIO control via REST API without latency
+
+- Resolved using Python’s `lgpio` with FastAPI’s async event loop and direct pin control on the Pi
+
+### Secure remote access without exposing SSH or port forwarding
+
+- Achieved through Cloudflare Tunnel and ZeroTrust device/user authentication
+
+---
+
+## Lessons Learned
+
+### Full-Stack DevOps Deployment
+
+- Configured complete local-to-cloud deployment pipelines using FastAPI, Uvicorn, and Cloudflare Tunnel
+
+### Embedded + Web Systems Integration
+
+- Gained insight into combining frontend interactivity with low-level GPIO control logic
+
+---
+
+## Project Structure
+
+```plaintext
+root/
+├── License/
+│   ├── LICENSE.md
+│   │
+│   └── NOTICE.md
+│
+├── .gitattributes
+│
+├── .gitignore
+│
+├── README.md
+│
+├── public/
+│   ├── file.svg
+│   │
+│   ├── globe.svg
+│   │
+│   ├── next.svg
+│   │
+│   ├── vercel.svg
+│   │
+│   └── window.svg
+│
+├── src/
+│   ├── app/
+│   │   ├── engineer/
+│   │   │
+│   │   ├── mechanic/
+│   │   │
+│   │   ├── pwm/
+│   │   │
+│   │   ├── telemetry/
+│   │   │
+│   │   ├── trainer/
+│   │   │
+│   │   ├── favicon.ico
+│   │   │
+│   │   ├── globals.css
+│   │   │
+│   │   ├── layout.tsx
+│   │   │
+│   │   ├── page.original.tsx
+│   │   │
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── card.tsx
+│   │   │   │
+│   │   │   ├── progress.tsx
+│   │   │   │
+│   │   │   └── slider.tsx
+│   │   │
+│   │   └── controls.tsx
+│   │
+│   │
+│   └── lib/
+│       ├── system.ts
+│       │
+│       └── utils.ts
+│
+├── components.json
+│
+├── eslint.config.mjs
+│
+├── main.py
+│
+├── next.config.ts
+│
+├── nucleosuite.fastapi
+│
+├── nucleosuite.npm
+│
+├── package-lock.json
+│
+├── package.json
+│
+├── postcss.config.mjs
+│
+├── test.py
+│
+└── tsconfig.json
+
+```
+
+---
+
+## Future Enhancements
+
+- Implement WebSocket support for real-time status updates
+- Extend PWM capabilities to support multi-channel simultaneous output
+- Build a mobile-optimized interface for touchscreen GPIO control
+- Log hardware usage data and implement analytics for I/O behavior
